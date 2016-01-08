@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Yugioh Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Text</th>
+      <th>Card type</th>
+      <th>Type</th>
+      <th>Element</th>
+      <th>Attack</th>
+      <th>Defense</th>
+      <th>Level</th>
+      <th>Property</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yugioh_cards.each do |yugioh_card| %>
+      <tr>
+        <td><%= yugioh_card.name %></td>
+        <td><%= yugioh_card.text %></td>
+        <td><%= yugioh_card.card_type %></td>
+        <td><%= yugioh_card.type %></td>
+        <td><%= yugioh_card.element %></td>
+        <td><%= yugioh_card.attack %></td>
+        <td><%= yugioh_card.defense %></td>
+        <td><%= yugioh_card.level %></td>
+        <td><%= yugioh_card.property %></td>
+        <td><%= link_to 'Show', yugioh_card %></td>
+        <td><%= link_to 'Edit', edit_yugioh_card_path(yugioh_card) %></td>
+        <td><%= link_to 'Destroy', yugioh_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_yugioh_card_path %>

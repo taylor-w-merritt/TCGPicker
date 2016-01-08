@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  text: MyText
+  card_type: MyString
+  type: 
+  element: MyString
+  attack: 1
+  defense: 1
+  level: 1
+  property: MyString
+
+two:
+  name: MyString
+  text: MyText
+  card_type: MyString
+  type: 
+  element: MyString
+  attack: 1
+  defense: 1
+  level: 1
+  property: MyString

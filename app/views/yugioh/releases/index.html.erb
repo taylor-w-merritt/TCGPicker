@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Yugioh Releases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Print tag</th>
+      <th>Rarity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yugioh_releases.each do |yugioh_release| %>
+      <tr>
+        <td><%= yugioh_release.print_tag %></td>
+        <td><%= yugioh_release.rarity %></td>
+        <td><%= link_to 'Show', yugioh_release %></td>
+        <td><%= link_to 'Edit', edit_yugioh_release_path(yugioh_release) %></td>
+        <td><%= link_to 'Destroy', yugioh_release, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Release', new_yugioh_release_path %>

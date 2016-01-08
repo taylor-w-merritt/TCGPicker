@@ -1,0 +1,2 @@
+module Yugioh::SetsHelper
+end

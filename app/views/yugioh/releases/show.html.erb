@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Print tag:</strong>
+  <%= @yugioh_release.print_tag %>
+</p>
+
+<p>
+  <strong>Rarity:</strong>
+  <%= @yugioh_release.rarity %>
+</p>
+
+<%= link_to 'Edit', edit_yugioh_release_path(@yugioh_release) %> |
+<%= link_to 'Back', yugioh_releases_path %>

@@ -1,0 +1,2 @@
+module Yugioh::CardsHelper
+end

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yugioh_card.name %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @yugioh_card.text %>
+</p>
+
+<p>
+  <strong>Card type:</strong>
+  <%= @yugioh_card.card_type %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @yugioh_card.monster_group %>
+</p>
+
+<p>
+  <strong>Element:</strong>
+  <%= @yugioh_card.element %>
+</p>
+
+<p>
+  <strong>Attack:</strong>
+  <%= @yugioh_card.attack %>
+</p>
+
+<p>
+  <strong>Defense:</strong>
+  <%= @yugioh_card.defense %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @yugioh_card.level %>
+</p>
+
+<p>
+  <strong>Property:</strong>
+  <%= @yugioh_card.property %>
+</p>
+
+<%= link_to 'Edit', edit_yugioh_card_path(@yugioh_card) %> |
+<%= link_to 'Back', yugioh_cards_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yugioh_set.name %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Card Name</th>
+        <th>Type</th>
+        <th>Rarity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% ::Yugioh::Release.where(:yugioh_set_id => @yugioh_set.id).order(:print_tag).each do |release| %>
+        <tr>
+          <td><%= release.print_tag %></td>
+          <td><%= link_to release.yugioh_card.name, controller: 'yugioh/cards', action: 'show', id: release.yugioh_card.id %></td>
+          <td><%= release.yugioh_card.card_type %></td>
+          <td><%= release.rarity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
+
+<%= link_to 'Edit', edit_yugioh_set_path(@yugioh_set) %> |
+<%= link_to 'Back', yugioh_sets_path %>

@@ -1,0 +1,2 @@
+module Yugioh::ReleasesHelper
+end
